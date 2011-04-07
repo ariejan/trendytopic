@@ -1,7 +1,8 @@
 Trendingtopic::Application.routes.draw do
   root :to => "home#index"
   
-  get "trending/index"
+  match 'trending' => 'trending#index'
+  match 'trending/:user' => 'trending#index'
 
   get "home/index"
 

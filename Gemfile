@@ -31,6 +31,7 @@ gem 'sqlite3'
 # end
 
 gem 'twitter-text'
+gem 'twitter'
 
 group :development, :test do
     gem 'rspec-rails', ">= 2.0.1"

@@ -12,4 +12,13 @@ describe TweetFinder, '#get_hash_tags' do
         tags = TweetFinder.get_hash_tags('Ik ben bij #kabisa')
         tags.first.should eql('kabisa')
     end
+    
+    it 'should find my trending topics' do
+        topics = ['eten', 'bier', 'eten', 'eten', 'werk', 'werk']
+        
+        trending = TweetFinder.get_trending(topics)
+        
+        trending.should be_an(Array)
+        trending.should eql(['eten', 'werk', 'bier'])
+    end    
 end
